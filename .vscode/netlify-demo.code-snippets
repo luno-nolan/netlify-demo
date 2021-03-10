@@ -1,0 +1,93 @@
+{
+  // Place your netlify-demo workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "html-me-bro": {
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"en\">",
+      "  <head>",
+      "    <meta charset=\"UTF-8\" />",
+      "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />",
+      "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
+      "    <title>Luno Lunch</title>",
+      "  </head>",
+      "  <body>",
+      "    Luno Lunch",
+      "  </body>",
+      "</html>",
+      ""
+    ],
+    "prefix": "html-me-bro",
+    "scope": "html"
+  },
+  "config-me-bro": {
+    "body": ["[build]", "  publish = \"site\"", ""],
+    "prefix": "config-me-bro",
+    "scope": "toml"
+  },
+  "greet-me-bro": {
+    "body": [
+      "exports.handler = async function (event, context) {",
+      "  return {",
+      "    statusCode: 200,",
+      "    body: JSON.stringify({ message: \"Hello World\" }),",
+      "  };",
+      "};",
+      ""
+    ],
+    "prefix": "greet-me-bro",
+    "scope": "javascript"
+  },
+  "config-funcs-bro": {
+    "body": ["functions = \"fns\""],
+    "prefix": "config-funcs-bro",
+    "scope": "toml"
+  },
+  "package-me-bro": {
+    "body": [
+      "{",
+      "  \"name\": \"netlify-demo\",",
+      "  \"version\": \"1.0.0\",",
+      "  \"scripts\": {",
+      "    \"start\": \"netlify dev\"",
+      "  },",
+      "  \"private\": true,",
+      "  \"devDependencies\": {",
+      "    \"netlify-cli\": \"^3.10.3\"",
+      "  }",
+      "}",
+      ""
+    ],
+    "prefix": "package-me-bro",
+    "scope": "json"
+  },
+  "wire-it-up-bro": {
+    "body": [
+      "<div id=\"root\">loading</div>",
+      "",
+      "<script>",
+      "  fetch(\"/.netlify/functions/hello\")",
+      "    .then((resp) => resp.json())",
+      "    .then(({ message }) => {",
+      "      document.getElementById(\"root\").innerHTML = message;",
+      "    });",
+      "</script>"
+    ],
+    "prefix": "wire-it-up-bro",
+    "scope": "html"
+  }
+}
